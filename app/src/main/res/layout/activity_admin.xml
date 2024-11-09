@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#1A237E">
+
+    <!-- Event Name EditText -->
+    <EditText
+        android:id="@+id/eventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Name"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="textCapWords"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Event Date EditText -->
+    <EditText
+        android:id="@+id/eventDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Date"
+        android:padding="12dp"
+        android:layout_below="@id/eventName"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Event Location EditText -->
+    <EditText
+        android:id="@+id/eventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location"
+        android:padding="12dp"
+        android:layout_below="@id/eventDate"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="textCapWords"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Event Description EditText -->
+    <EditText
+        android:id="@+id/eventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:padding="12dp"
+        android:layout_below="@id/eventLocation"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Event Time EditText -->
+    <EditText
+        android:id="@+id/eventTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Time (e.g., HH:MM)"
+        android:padding="12dp"
+        android:layout_below="@id/eventDescription"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Register Event Button -->
+    <Button
+        android:id="@+id/registerEventBtn"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventTime"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#0D47A1"
+        android:fontFamily="sans-serif-medium"
+        android:padding="12dp"
+        android:text="Create Event"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!--Update Button-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/registerEventBtn"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toEndOf="@id/registerEventBtn"
+        android:backgroundTint="#0D47A1"
+        android:padding="12dp"
+        android:text="Update"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!--Delete Button-->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/registerEventBtn"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@id/button2"
+        android:padding="12dp"
+        android:paddingLeft="10dp"
+        android:text="Delete"
+        android:backgroundTint="#B71C1C"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerEventBtn"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF" />
+
+    <!-- Users Button -->
+    <Button
+        android:id="@+id/usersBtn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Users"
+        android:backgroundTint="#0D47A1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Logout"
+        android:backgroundTint="#B71C1C"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>
